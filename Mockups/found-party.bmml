@@ -1,0 +1,22 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="339" measuredH="567" mockupW="282" mockupH="510">
+  <controls>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="139" y="178" w="-1" h="-1" measuredW="119" measuredH="21" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <text>Found%20Lunch%20Party</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Icon" x="146" y="214" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Icon" x="203" y="214" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Icon" x="146" y="277" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Icon" x="203" y="277" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::iPhone" x="57" y="57" w="-1" h="-1" measuredW="282" measuredH="510" zOrder="0" locked="true" isInGroup="-1"/>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::IconLabel" x="116" y="372" w="-1" h="-1" measuredW="160" measuredH="69" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SpinningIcon%7Clarge</icon>
+        <labelPosition>bottom</labelPosition>
+        <text>Looking%20for%20places%20to%20eat....</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

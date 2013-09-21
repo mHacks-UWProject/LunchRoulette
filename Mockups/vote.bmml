@@ -1,0 +1,136 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="704" measuredH="727" mockupW="647" mockupH="670">
+  <controls>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="139" y="178" w="-1" h="-1" measuredW="111" measuredH="21" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <text>Vote%20where%20to%20eat</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::iPhone" x="57" y="57" w="-1" h="-1" measuredW="282" measuredH="510" zOrder="0" locked="true" isInGroup="-1"/>
+    <control controlID="35" controlTypeID="__group__" x="101" y="243" w="200" h="48" measuredW="200" measuredH="48" zOrder="2" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="0" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="0" locked="false" isInGroup="35"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="54" y="6" w="146" h="39" measuredW="200" measuredH="80" zOrder="1" locked="false" isInGroup="35">
+          <controlProperties>
+            <text>*Chen%27s*%0A0%20Votes</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="176" y="12" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="2" locked="false" isInGroup="35">
+          <controlProperties>
+            <icon>GtIcon%7Csmall</icon>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="36" controlTypeID="__group__" x="101" y="306" w="200" h="48" measuredW="200" measuredH="48" zOrder="3" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="0" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="0" locked="false" isInGroup="36"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="54" y="6" w="146" h="39" measuredW="200" measuredH="80" zOrder="1" locked="false" isInGroup="36">
+          <controlProperties>
+            <text>*Al%20Madina*%0A1%20Vote</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="176" y="12" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="2" locked="false" isInGroup="36">
+          <controlProperties>
+            <icon>GtIcon%7Csmall</icon>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="37" controlTypeID="__group__" x="101" y="369" w="200" h="48" measuredW="200" measuredH="48" zOrder="4" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="0" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="0" locked="false" isInGroup="37"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="54" y="6" w="146" h="39" measuredW="200" measuredH="80" zOrder="1" locked="false" isInGroup="37">
+          <controlProperties>
+            <text>*Burger%20King*%0A0%20Votes</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="176" y="12" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="2" locked="false" isInGroup="37">
+          <controlProperties>
+            <icon>GtIcon%7Csmall</icon>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="39" controlTypeID="__group__" x="104" y="444" w="197" h="24" measuredW="197" measuredH="24" zOrder="5" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="0" y="4" w="146" h="17" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="39">
+          <controlProperties>
+            <text>Suggest%20a%20place...</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="173" y="0" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="1" locked="false" isInGroup="39">
+          <controlProperties>
+            <icon>GtIcon%7Csmall</icon>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Label" x="101" y="199" w="-1" h="-1" measuredW="201" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>56%20Seconds%20until%20location%20is%20chosen</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::iPhone" x="422" y="72" w="-1" h="-1" measuredW="282" measuredH="510" zOrder="7" locked="false" isInGroup="-1"/>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::StickyNote" x="509" y="604" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Alternate%20with%20no%20location%20detail</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="501" y="185" w="-1" h="-1" measuredW="111" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <text>Vote%20where%20to%20eat</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="__group__" x="463" y="250" w="200" h="48" measuredW="200" measuredH="48" zOrder="10" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="0" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="0" locked="false" isInGroup="44"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="54" y="6" w="146" h="39" measuredW="200" measuredH="80" zOrder="1" locked="false" isInGroup="44">
+          <controlProperties>
+            <text>*Chen%27s*%0A0%20Votes%2C%202.2km</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="45" controlTypeID="__group__" x="463" y="313" w="200" h="48" measuredW="200" measuredH="48" zOrder="11" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="0" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="0" locked="false" isInGroup="45"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="54" y="6" w="146" h="39" measuredW="200" measuredH="80" zOrder="1" locked="false" isInGroup="45">
+          <controlProperties>
+            <text>*Al%20Madina*%0A1%20Vote%2C%203km</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="46" controlTypeID="__group__" x="463" y="376" w="200" h="48" measuredW="200" measuredH="48" zOrder="12" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="0" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="0" locked="false" isInGroup="46"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="54" y="6" w="146" h="39" measuredW="200" measuredH="80" zOrder="1" locked="false" isInGroup="46">
+          <controlProperties>
+            <text>*Burger%20King*%0A0%20Votes%2C%20500m</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="47" controlTypeID="__group__" x="466" y="451" w="197" h="24" measuredW="197" measuredH="24" zOrder="13" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="0" y="4" w="146" h="17" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="47">
+          <controlProperties>
+            <text>Suggest%20a%20place...</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="173" y="0" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="1" locked="false" isInGroup="47">
+          <controlProperties>
+            <icon>GtIcon%7Csmall</icon>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Label" x="463" y="206" w="-1" h="-1" measuredW="201" measuredH="21" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>56%20Seconds%20until%20location%20is%20chosen</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

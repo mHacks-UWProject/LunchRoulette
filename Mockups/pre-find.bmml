@@ -1,0 +1,25 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="342" measuredH="530" mockupW="282" mockupH="510">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="60" y="20" w="-1" h="-1" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="156" y="360" w="-1" h="-1" measuredW="91" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Find%20People</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Title" x="74" y="147" w="255" h="-1" measuredW="189" measuredH="37" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>28</size>
+        <text>Lunch%20Roulette</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="__group__" x="115" y="199" w="173" h="139" measuredW="173" measuredH="139" zOrder="2" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="0" y="0" w="173" h="139" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="5">
+          <controlProperties>
+            <text>We%27re%20going%20to%20match%20you%20up%20with%20people%20we%20think%20you%20will%20enjoy%20having%20lunch%20with.%0A%20%0AYour%20lunch%20will%20be%20scheduled%20in%20*15%20minutes*.</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>

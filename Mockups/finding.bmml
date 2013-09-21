@@ -1,0 +1,39 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="347" measuredH="567" mockupW="282" mockupH="510">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="65" y="57" w="-1" h="-1" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::IconLabel" x="116" y="199" w="-1" h="-1" measuredW="151" measuredH="48" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>ContactIcon%7Clarge</icon>
+        <labelPosition>right</labelPosition>
+        <text>Valentin%20Tsatskin</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::IconLabel" x="116" y="262" w="-1" h="-1" measuredW="141" measuredH="48" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>ContactIcon%7Clarge</icon>
+        <labelPosition>right</labelPosition>
+        <text>Adam%20Wootton</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::IconLabel" x="116" y="325" w="-1" h="-1" measuredW="122" measuredH="48" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SpinningIcon%7Clarge</icon>
+        <labelPosition>right</labelPosition>
+        <text>Searching...</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::IconLabel" x="116" y="388" w="-1" h="-1" measuredW="122" measuredH="48" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SpinningIcon%7Clarge</icon>
+        <labelPosition>right</labelPosition>
+        <text>Searching...</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="116" y="172" w="-1" h="-1" measuredW="91" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <text>Finding%20People</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
