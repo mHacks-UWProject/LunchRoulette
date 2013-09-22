@@ -9,6 +9,7 @@
 #import "LRLobbyViewController.h"
 
 double const kLRPollingInterval = 2.5;
+NSInteger const kLRPartners = 3;
 
 @interface LRLobbyViewController ()
 
@@ -55,7 +56,7 @@ double const kLRPollingInterval = 2.5;
         spinner.frame = CGRectMake(-150, 20, width, 50);
         [footerView addSubview:spinner];
         self.statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(-65, 0, width, 25)];
-        self.statusLabel.text = @"0/3 Partners Found";
+        self.statusLabel.text = [NSString stringWithFormat:@"0/%i Partners Found", kLRPartners];
         [footerView addSubview:self.statusLabel];
         self.tableView.tableFooterView = footerView;
     }
@@ -95,7 +96,6 @@ double const kLRPollingInterval = 2.5;
             NSArray *userIds = group[@"users"];
             if(userIds.count > 0) {
                 self.lastCount = userIds.count;
-                self.statusLabel.text = [NSString stringWithFormat:@"%i/3 Partners Found", self.lastCount - 1];
                 [self loadObjects];
             }
         }
@@ -126,7 +126,11 @@ double const kLRPollingInterval = 2.5;
     UIImage *picture =[UIImage imageWithData:pictureData];
     cell.imageView.image = picture;
 
-    self.statusLabel.text = [NSString stringWithFormat:@"%i/3 Partners Found", [self.tableView numberOfRowsInSection:0]];
+    NSInteger partners = [self.tableView numberOfRowsInSection:0];
+    self.statusLabel.text = [NSString stringWithFormat:@"%i/%i Partners Found", partners, kLRPartners];
+    if(partners == kLRPartners) {
+        [self]
+    }
 
     return cell;
 }
