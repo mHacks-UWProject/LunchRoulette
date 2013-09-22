@@ -8,7 +8,7 @@
 
 #import "LRLobbyViewController.h"
 
-double const kLRPollingInterval = 10;
+double const kLRPollingInterval = 5;
 
 @interface LRLobbyViewController ()
 
@@ -78,12 +78,11 @@ double const kLRPollingInterval = 10;
 }
 
 - (PFQuery *)queryForTable {
-    PFQuery *query = [PFUser query];
-
     PFUser *user = [PFUser currentUser];
+    PFQuery *query = [PFUser query];
     PFObject *group = [[PFQuery queryWithClassName:@"Group"] getFirstObject];
-
     [query whereKey:@"objectId" containedIn:group[@"users"]];
+    [query whereKey:@"objectId" notEqualTo:user.objectId];
     return query;
 }
 
