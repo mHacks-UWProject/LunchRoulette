@@ -85,7 +85,11 @@ public class ConnectActivity extends Activity {
 		ParseFacebookUtils.logIn(permissions, this, new LogInCallback() {
 			@Override
 			public void done(ParseUser user, ParseException err) {
+				try {
 				ConnectActivity.this.progressDialog.dismiss();
+				} catch (Exception e){
+					
+				}
 				if (user == null) {
 					// You fucked up, you fucked up, you fucked up
 					Toast.makeText(getApplicationContext(), "you fucked up",
