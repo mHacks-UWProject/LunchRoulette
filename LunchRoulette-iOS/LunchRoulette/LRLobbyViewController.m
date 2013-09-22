@@ -8,7 +8,7 @@
 
 #import "LRLobbyViewController.h"
 
-double const kLRPollingInterval = 5;
+double const kLRPollingInterval = 2.5;
 
 @interface LRLobbyViewController ()
 
@@ -37,6 +37,18 @@ double const kLRPollingInterval = 5;
         self.tableView.scrollEnabled = NO;
         [self.navigationController setNavigationBarHidden:NO animated:YES];
         self.title = @"Finding a lunch party";
+
+
+        CGFloat width = self.view.frame.size.width;
+        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 50)];
+        UILabel *labelView = [[UILabel alloc] initWithFrame:CGRectMake(80, 10, width, 25)];
+        labelView.text = @"Your Lunch Partners";
+        [headerView addSubview:labelView];
+        self.tableView.tableHeaderView = headerView;
+
+        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        [spinner startAnimating];
+        self.tableView.tableFooterView = spinner;
     }
     return self;
 }
@@ -69,8 +81,6 @@ double const kLRPollingInterval = 5;
             return;
         }
 
-        NSLog(@"%@", objects);
-
         if(objects.count > 0) {
             PFObject *group = objects.firstObject;
             NSArray *userIds = group[@"users"];
@@ -92,8 +102,6 @@ double const kLRPollingInterval = 5;
 }
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
-
-    NSLog(@"index row %i", indexPath.row);
 
     static NSString *identifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];

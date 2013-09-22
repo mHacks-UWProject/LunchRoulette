@@ -79,7 +79,9 @@
                                 <rect key="frame" x="40" y="102" width="240" height="226"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">We're going to match you up with people we think you will enjoy having lunch with. Your lunch will be scheduled in 15 minutes.</string>
+                                <string key="text">We're going to match you up with people we think you will enjoy having lunch with.
+ 
+Your lunch will be scheduled in 15 minutes.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -110,7 +112,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="gkT-Z1-n0Y"/>
-                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3S1-QC-ouF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,6 +124,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bbD-9d-JrR"/>
+        <segue reference="c2c-S0-kbe"/>
     </inferredMetricsTieBreakers>
 </document>
