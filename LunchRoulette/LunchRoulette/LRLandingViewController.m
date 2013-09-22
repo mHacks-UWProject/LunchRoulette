@@ -7,6 +7,7 @@
 //
 
 #import "LRLandingViewController.h"
+#import "LRLobbyViewController.h"
 
 @interface LRLandingViewController ()
 
@@ -36,9 +37,13 @@
 }
 
 - (IBAction)didPressStart:(id)sender {
-    PFQueryTableViewController *controller = [[PFQueryTableViewController alloc] initWithClassName:@"lobby"];
-
-    [self.navigationController pushViewController:controller animated:YES];
+    PFUser *user = [PFUser currentUser];
+    [user fetch];
+    user[@"lookingForGroup"] = [NSNumber numberWithBool:YES];
+    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        LRLobbyViewController *lobby = [[LRLobbyViewController alloc] initWithClassName:@"_User"];
+        [self.navigationController pushViewController:lobby animated:YES];
+    }];
 }
 
 - (IBAction)didPressLogout:(id)sender {
