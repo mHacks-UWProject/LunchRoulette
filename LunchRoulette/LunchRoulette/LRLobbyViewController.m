@@ -28,10 +28,12 @@ double const kLRPollingInterval = 5;
     return self;
 }
 
-- (id) initWithStyle:(UITableViewStyle)style {
-    self = [super initWithStyle:style];
+- (id) initWithStyle:(UITableViewStyle)style className:(NSString *)aClassName {
+    self = [super initWithStyle:style className:aClassName];
     if(self) {
-        self.parseClassName = @"_User";
+        self.parseClassName = aClassName;
+        self.pullToRefreshEnabled = NO;
+        self.tableView.scrollEnabled = NO;
     }
     return self;
 }
@@ -84,6 +86,23 @@ double const kLRPollingInterval = 5;
     [query whereKey:@"objectId" containedIn:group[@"users"]];
     [query whereKey:@"objectId" notEqualTo:user.objectId];
     return query;
+}
+
+- (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+    static NSString *identifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+
+    cell.textLabel.text = [object objectForKey:@"name"];
+
+    NSString *picturePath = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal",  object[@"facebookId"]];
+    NSData *pictureData = [NSData dataWithContentsOfURL:[NSURL URLWithString:picturePath]];
+    UIImage *picture =[UIImage imageWithData:pictureData];
+    cell.imageView.image = picture;
+
+    return cell;
 }
 
 @end
