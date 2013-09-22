@@ -55,6 +55,12 @@ public class ConnectActivity extends Activity {
 	    ParseUser currentUser = ParseUser.getCurrentUser();
 	    if ((currentUser != null) && ParseFacebookUtils.isLinked(currentUser)) {
 	        // Go to the user info activity
+		    currentUser.put("lookingForGroup", false);
+		    try {
+				currentUser.save();
+			} catch (ParseException e) {
+
+			}
 	        buttonClick();
 	    }
 	}

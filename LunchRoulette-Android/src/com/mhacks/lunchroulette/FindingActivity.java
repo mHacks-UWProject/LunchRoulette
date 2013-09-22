@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Pair;
+import android.view.View;
 import android.widget.ListView;
 
 import com.mhacks.lunchroulette.adapters.FoundPeopleListAdapter;
@@ -31,15 +32,6 @@ public class FindingActivity extends Activity {
 		mList = (ListView) findViewById(R.id.listView1);
 
 		mUser = ParseUser.getCurrentUser();
-		if (mUser != null) {
-//			Pair<String, String> thisUser = new Pair<String, String>(
-//					mUser.getString("name"),
-//					imageUrlBuilder(mUser.getString("facebookId")));
-//			mPeople.add(thisUser);
-//			mParseUsers.add(mUser.getObjectId());
-		} else {
-			// you fucked up
-		}
 
 		setupListView();
 	}
@@ -51,23 +43,30 @@ public class FindingActivity extends Activity {
 	// Due to iOS nonsense we're saying 'fuck you' to the 21st century and just
 	// rapidly polling rather than using C2DM
 	private void beginRetardedPolling() {
-		Handler handler = new Handler();
-		handler.post(rePoll());
+		final Handler handler2 = new Handler();
 
-//		if (mParseUsers.size() < 4) {
-//			handler.postDelayed(rePoll(), 10000);
-//		}
-
-	}
-
-	private Runnable rePoll() {
-		return new Runnable() {
+		Runnable run = new Runnable() {
 
 			@Override
 			public void run() {
-				pollStuff();
+				if (mParseUsers.size() < 3) {
+					pollStuff();
+					handler2.postDelayed(this, 5000);
+				} else {
+					handler2.postDelayed(new Runnable() {
+						
+						@Override
+						public void run() {
+							// TODO Auto-generated method stub
+							
+						}
+					}, 3000);
+				}
 			}
 		};
+
+		handler2.post(run);
+
 	}
 
 	private void pollStuff() {
@@ -78,34 +77,56 @@ public class FindingActivity extends Activity {
 		groupQuery.findInBackground(new FindCallback<ParseObject>() {
 			@Override
 			public void done(List<ParseObject> groups, ParseException arg1) {
-				 ArrayList<Pair<String, String>> mPeople = new ArrayList<Pair<String, String>>();
+				ArrayList<Pair<String, String>> mPeople = new ArrayList<Pair<String, String>>();
+				boolean updated = false;
 
-				List<String> users = groups.get(0).getList("users");
+				if (groups.size() != 0) {
 
-//				users.removeAll(mParseUsers);
+					List<String> users = groups.get(0).getList("users");
+					users.remove(mUser.getObjectId());
 
-				for (String objectId : users) {
-					ParseQuery<ParseUser> singleQuery = ParseQuery.getUserQuery();
-					ParseUser user = null;
-					try {
-						user = singleQuery.get(objectId);
-					} catch (ParseException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
+					for (String objectId : users) {
+						ParseQuery<ParseUser> singleQuery = ParseQuery
+								.getUserQuery();
+						ParseUser user = null;
+						try {
+							user = singleQuery.get(objectId);
+						} catch (ParseException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						Pair<String, String> userPair = new Pair<String, String>(
+								user.getString("name"), imageUrlBuilder(user
+										.getString("facebookId")));
+						mPeople.add(userPair);
+						mParseUsers.add(user.getObjectId());
+						if (mAdapter != null
+								&& mAdapter.getCount() != mParseUsers.size()) {
+							updated = true;
+							mAdapter.clear();
+						}
 					}
-					Pair<String, String> userPair = new Pair<String, String>(
-							user.getString("name"), imageUrlBuilder(user
-									.getString("facebookId")));
-					mPeople.add(userPair);
-					mParseUsers.add(user.getObjectId());
-					mList.invalidate();
+					if (updated || mAdapter == null) {
+						mAdapter = new FoundPeopleListAdapter(mContext,
+								R.layout.list_item, mPeople, mContext
+										.getLayoutInflater());
+						mList.setAdapter(mAdapter);
+						updated = false;
+					}
+					
 				}
-				mAdapter = new FoundPeopleListAdapter(mContext, R.layout.list_item,
-						mPeople, mContext.getLayoutInflater());
-				mList.setAdapter(mAdapter);
-
 			}
 		});
+	}
+
+	private void launchNext() {
+		new Handler().postDelayed(new Runnable() {
+
+			@Override
+			public void run() {
+				// Start next activity.
+			}
+		}, 3000);
 	}
 
 	private String imageUrlBuilder(String id) {

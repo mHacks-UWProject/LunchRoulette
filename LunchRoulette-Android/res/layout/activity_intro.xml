@@ -24,7 +24,7 @@
         android:layout_alignRight="@+id/textView1"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="40dp"
-        android:text="We&apos;re looking to match you up with people we think you will enjoy having lunch with \n\nYour lunch will be scheduled in 15 minutes" />
+        android:text="We&apos;re looking to match you up with people we think you will enjoy having lunch with. \n\nYour lunch will be scheduled in 15 minutes." />
 
     <Button
         android:id="@+id/button1"
@@ -33,6 +33,6 @@
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
-        android:text="Find People" />
+        android:text="Let's Eat!" />
 
 </RelativeLayout>

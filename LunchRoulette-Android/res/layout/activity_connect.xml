@@ -8,16 +8,37 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ConnectActivity" >
 
-     <Button
-         android:id="@+id/loginButton"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentTop="true"
-         android:layout_centerHorizontal="true"
-         android:layout_marginTop="146dp"
-         android:background="@drawable/button_login"
-         android:text="Login"
-         android:textColor="#fff"
-         android:textStyle="bold" />
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="134dp"
+        android:background="@drawable/button_login"
+        android:text="Login"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:text="Lunch Roulette"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:text="Never eat bored"
+        android:textSize="24dip" />
 
 </RelativeLayout>
