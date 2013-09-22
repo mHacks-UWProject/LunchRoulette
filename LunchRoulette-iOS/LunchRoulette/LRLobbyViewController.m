@@ -14,6 +14,8 @@ double const kLRPollingInterval = 2.5;
 
 @property NSTimer *pollingTimer;
 @property NSUInteger lastCount;
+@property NSUInteger prelastCount;
+@property UILabel *statusLabel;
 
 @end
 
@@ -43,12 +45,19 @@ double const kLRPollingInterval = 2.5;
         UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 50)];
         UILabel *labelView = [[UILabel alloc] initWithFrame:CGRectMake(80, 10, width, 25)];
         labelView.text = @"Your Lunch Partners";
+        labelView.font = [UIFont boldSystemFontOfSize:18];
         [headerView addSubview:labelView];
         self.tableView.tableHeaderView = headerView;
 
+        UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(150, 0, width, 50)];
         UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         [spinner startAnimating];
-        self.tableView.tableFooterView = spinner;
+        spinner.frame = CGRectMake(-150, 20, width, 50);
+        [footerView addSubview:spinner];
+        self.statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(-65, 0, width, 25)];
+        self.statusLabel.text = @"0/3 Partners Found";
+        [footerView addSubview:self.statusLabel];
+        self.tableView.tableFooterView = footerView;
     }
     return self;
 }
@@ -86,6 +95,7 @@ double const kLRPollingInterval = 2.5;
             NSArray *userIds = group[@"users"];
             if(userIds.count > 0) {
                 self.lastCount = userIds.count;
+                self.statusLabel.text = [NSString stringWithFormat:@"%i/3 Partners Found", self.lastCount - 1];
                 [self loadObjects];
             }
         }
@@ -115,6 +125,8 @@ double const kLRPollingInterval = 2.5;
     NSData *pictureData = [NSData dataWithContentsOfURL:[NSURL URLWithString:picturePath]];
     UIImage *picture =[UIImage imageWithData:pictureData];
     cell.imageView.image = picture;
+
+    self.statusLabel.text = [NSString stringWithFormat:@"%i/3 Partners Found", [self.tableView numberOfRowsInSection:0]];
 
     return cell;
 }
