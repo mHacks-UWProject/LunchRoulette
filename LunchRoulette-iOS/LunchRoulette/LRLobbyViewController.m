@@ -29,11 +29,14 @@ double const kLRPollingInterval = 5;
 }
 
 - (id) initWithStyle:(UITableViewStyle)style className:(NSString *)aClassName {
+    style = UITableViewStyleGrouped;
     self = [super initWithStyle:style className:aClassName];
     if(self) {
         self.parseClassName = aClassName;
         self.pullToRefreshEnabled = NO;
         self.tableView.scrollEnabled = NO;
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        self.title = @"Finding a lunch party";
     }
     return self;
 }

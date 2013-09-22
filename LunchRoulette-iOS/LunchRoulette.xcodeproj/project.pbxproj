@@ -21,7 +21,6 @@
 		E5196F6617EE56C9003BBDE4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5196F6417EE56C9003BBDE4 /* InfoPlist.strings */; };
 		E5196F6817EE56C9003BBDE4 /* LunchRouletteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5196F6717EE56C9003BBDE4 /* LunchRouletteTests.m */; };
 		E5196F7217EE61E6003BBDE4 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F7117EE61E6003BBDE4 /* FacebookSDK.framework */; };
-		E5196F7617EE6693003BBDE4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F7517EE6692003BBDE4 /* Parse.framework */; };
 		E5196F7817EE66CA003BBDE4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F7717EE66CA003BBDE4 /* AudioToolbox.framework */; };
 		E5196F7A17EE66D2003BBDE4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F7917EE66D2003BBDE4 /* CFNetwork.framework */; };
 		E5196F7C17EE66DE003BBDE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F7B17EE66DE003BBDE4 /* CoreLocation.framework */; };
@@ -35,6 +34,7 @@
 		E5196F8E17EE7085003BBDE4 /* LRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5196F8D17EE7085003BBDE4 /* LRLoginViewController.m */; };
 		E5196F9117EE7505003BBDE4 /* LRLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5196F9017EE7505003BBDE4 /* LRLandingViewController.m */; };
 		E5196F9717EE831D003BBDE4 /* LRLobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5196F9617EE831D003BBDE4 /* LRLobbyViewController.m */; };
+		E54D241217EEEE7B003F7FA2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F7517EE6692003BBDE4 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54D241217EEEE7B003F7FA2 /* Parse.framework in Frameworks */,
 				E5196F8817EE6707003BBDE4 /* SystemConfiguration.framework in Frameworks */,
 				E5196F8617EE66FF003BBDE4 /* StoreKit.framework in Frameworks */,
 				E5196F8417EE66FA003BBDE4 /* Security.framework in Frameworks */,
@@ -104,7 +105,6 @@
 				E5196F7217EE61E6003BBDE4 /* FacebookSDK.framework in Frameworks */,
 				E5196F3B17EE56C9003BBDE4 /* UIKit.framework in Frameworks */,
 				E5196F3717EE56C9003BBDE4 /* Foundation.framework in Frameworks */,
-				E5196F7617EE6693003BBDE4 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +441,7 @@
 					"$(inherited)",
 					/Users/vtsatskin/Downloads/FacebookSDK,
 					/Users/vtsatskin/Code/LunchRoulette/LunchRoulette,
+					"/Users/vtsatskin/Code/LunchRoulette/LunchRoulette-iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LunchRoulette/LunchRoulette-Prefix.pch";
@@ -459,6 +460,7 @@
 					"$(inherited)",
 					/Users/vtsatskin/Downloads/FacebookSDK,
 					/Users/vtsatskin/Code/LunchRoulette/LunchRoulette,
+					"/Users/vtsatskin/Code/LunchRoulette/LunchRoulette-iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LunchRoulette/LunchRoulette-Prefix.pch";

@@ -7,5 +7,8 @@
         "_default": {
             "link": "LunchRoulette"
         }
+    }, 
+    "global": {
+        "parseVersion": "1.2.12"
     }
 }
