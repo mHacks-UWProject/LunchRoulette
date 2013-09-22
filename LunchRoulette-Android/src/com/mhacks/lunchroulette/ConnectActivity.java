@@ -112,5 +112,6 @@ public class ConnectActivity extends Activity {
 
 	public void proceed() {
 		startActivity(new Intent(this, IntroductionActivity.class));
+		finish();
 	}
 }

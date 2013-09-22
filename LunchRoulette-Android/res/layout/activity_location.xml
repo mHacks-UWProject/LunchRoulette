@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar"
+        android:layout_centerHorizontal="true" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        style="@style/GenericProgressBackground"
+        android:layout_height="30dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/listView1" >
+
+        <ProgressBar style="@style/GenericProgressIndicator" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        style="@style/GenericProgressBackground"
+        android:layout_height="30dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/listView1" >
+
+        <ProgressBar style="@style/GenericProgressIndicator" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="120dip"
+        android:layout_below="@+id/listView1"
+        android:layout_marginTop="25dip"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Found everyone..."
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="15dip"
+        android:layout_marginTop="5dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vote Where to Eat"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+</RelativeLayout>

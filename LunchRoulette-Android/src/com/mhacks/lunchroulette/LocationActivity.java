@@ -4,33 +4,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Pair;
-import android.view.View;
 import android.widget.ListView;
 
-import com.mhacks.lunchroulette.adapters.FoundPeopleListAdapter;
+import com.mhacks.lunchroulette.adapters.LocationListAdapter;
 import com.parse.FindCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
-public class FindingActivity extends Activity {
+public class LocationActivity extends Activity {
 
 	private ListView mList;
-	private ArrayList<String> mParseUsers = new ArrayList<String>();
-	private FoundPeopleListAdapter mAdapter;
+	private ArrayList<String> mLocationIds = new ArrayList<String>();
+	private LocationListAdapter mAdapter;
 	private ParseUser mUser;
 	private Activity mContext = this;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_finding);
+		setContentView(R.layout.activity_location);
 		mList = (ListView) findViewById(R.id.listView1);
 
 		mUser = ParseUser.getCurrentUser();
@@ -45,30 +41,7 @@ public class FindingActivity extends Activity {
 	// Due to iOS nonsense we're saying 'fuck you' to the 21st century and just
 	// rapidly polling rather than using C2DM
 	private void beginRetardedPolling() {
-		final Handler handler2 = new Handler();
-
-		Runnable run = new Runnable() {
-
-			@Override
-			public void run() {
-				if (mParseUsers.size() < 3) {
-					pollStuff();
-					handler2.postDelayed(this, 5000);
-				} else {
-					ParseUser.getCurrentUser().put("lookingForGroup", false);
-
-					handler2.postDelayed(new Runnable() {
-						
-						@Override
-						public void run() {
-							startActivity(new Intent(mContext, LocationActivity.class));
-						}
-					}, 2000);
-				}
-			}
-		};
-
-		handler2.post(run);
+		pollStuff();
 
 	}
 
@@ -80,38 +53,37 @@ public class FindingActivity extends Activity {
 		groupQuery.findInBackground(new FindCallback<ParseObject>() {
 			@Override
 			public void done(List<ParseObject> groups, ParseException arg1) {
-				ArrayList<Pair<String, String>> mPeople = new ArrayList<Pair<String, String>>();
+				ArrayList<Pair<String, String>> mPlaces = new ArrayList<Pair<String, String>>();
 				boolean updated = false;
 
 				if (groups.size() != 0) {
 
-					List<String> users = groups.get(0).getList("users");
-					users.remove(mUser.getObjectId());
+					List<String> locations = groups.get(0).getList("locations");
 
-					for (String objectId : users) {
-						ParseQuery<ParseUser> singleQuery = ParseQuery
-								.getUserQuery();
-						ParseUser user = null;
+					for (String locationId : locations) {
+						ParseQuery<ParseObject> singleQuery = ParseQuery
+								.getQuery("locations");
+						ParseObject place = null;
 						try {
-							user = singleQuery.get(objectId);
+							place = singleQuery.get(locationId);
 						} catch (ParseException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-						Pair<String, String> userPair = new Pair<String, String>(
-								user.getString("name"), imageUrlBuilder(user
-										.getString("facebookId")));
-						mPeople.add(userPair);
-						mParseUsers.add(user.getObjectId());
+						Pair<String, String> locationpair = new Pair<String, String>(
+								place.getString("name"), place
+										.getString("address"));
+						mPlaces.add(locationpair);
+						mLocationIds.add(place.getObjectId());
 						if (mAdapter != null
-								&& mAdapter.getCount() != mParseUsers.size()) {
+								&& mAdapter.getCount() != mLocationIds.size()) {
 							updated = true;
 							mAdapter.clear();
 						}
 					}
 					if (updated || mAdapter == null) {
-						mAdapter = new FoundPeopleListAdapter(mContext,
-								R.layout.list_item, mPeople, mContext
+						mAdapter = new LocationListAdapter(mContext,
+								R.layout.list_item, mPlaces, mContext
 										.getLayoutInflater());
 						mList.setAdapter(mAdapter);
 						updated = false;
@@ -120,12 +92,6 @@ public class FindingActivity extends Activity {
 				}
 			}
 		});
-	}
-
-
-
-	private String imageUrlBuilder(String id) {
-		return "http://graph.facebook.com/" + id + "/picture?type=normal";
 	}
 	
 	@Override
