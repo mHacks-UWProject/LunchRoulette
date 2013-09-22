@@ -6,8 +6,9 @@
 
 // Looking for group set to true
 Parse.Cloud.afterSave(Parse.User, function(request) {
+  var Group = Parse.Object.extend("Group");
+
   if(request.object.get("lookingForGroup")) {
-	var Group = Parse.Object.extend("Group");
 	var query = new Parse.Query(Group);
 	query.notContainedIn('users', [request.object.id]);
 
@@ -27,6 +28,29 @@ Parse.Cloud.afterSave(Parse.User, function(request) {
 					group.save();
 					break;
 				}
+			}
+		},
+		error: function(error) {
+			alert("Error: " + error.code + " " + error.message);
+		}
+	});
+  } else {
+  	var query = new Parse.Query(Group);
+  	query.containedIn('users', [request.object.id]);
+	query.find({
+		success: function(results) {
+			for (var i = 0; i < results.length; i++) { 
+				var group = results[i];
+				var users = group.get('users');
+
+				for(var j = 0; j < users.length; j++) {
+					if(users[j] == request.object.id) {
+						users.splice(j, 1);
+					}
+				}
+
+				group.users = users;
+				group.save();
 			}
 		},
 		error: function(error) {
