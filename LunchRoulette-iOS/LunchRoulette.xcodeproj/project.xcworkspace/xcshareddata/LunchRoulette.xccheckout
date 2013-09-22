@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6D459D2A-6B32-446D-8CD9-EEF2105EC81B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LunchRoulette</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B4286013-8917-431E-8BBA-894206351414</key>
+		<string>ssh://github.com/mHacks-UWProject/LunchRoulette.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LunchRoulette-iOS/LunchRoulette.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B4286013-8917-431E-8BBA-894206351414</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/mHacks-UWProject/LunchRoulette.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B4286013-8917-431E-8BBA-894206351414</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B4286013-8917-431E-8BBA-894206351414</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LunchRoulette</string>
+		</dict>
+	</array>
+</dict>
+</plist>
