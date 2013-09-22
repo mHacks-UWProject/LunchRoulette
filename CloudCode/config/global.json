@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "LunchRoulette": {
+            "applicationId": "RHIntkgdRNEzMEoqFdSc9LBIlxY3JaYN4ckRcuhW", 
+            "masterKey": "BFOUa7JfhXymScwFUjDaxOF1K8zwPGeIOU6tFgae"
+        }, 
+        "_default": {
+            "link": "LunchRoulette"
+        }
+    }
+}
