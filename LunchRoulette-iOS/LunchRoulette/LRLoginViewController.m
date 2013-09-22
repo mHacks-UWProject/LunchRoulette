@@ -27,10 +27,14 @@
 {
     [super viewDidLoad];
 
-    if ([PFUser currentUser] && // Check if a user is cached
+    PFUser *user = [PFUser currentUser];
+    if (user && // Check if a user is cached
         [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) // Check if user is linked to Facebook
     {
         // Push the next view controller without animation
+        user[@"lookingForGroup"] = @NO;
+        [user saveInBackground];
+        
         [self performSegueWithIdentifier:@"landing" sender:self];
     }
 }
@@ -57,10 +61,39 @@
             }
         } else if (user.isNew) {
             NSLog(@"User with facebook signed up and logged in!");
+            [self getUserData];
             [self performSegueWithIdentifier:@"landing" sender:self];
         } else {
             NSLog(@"User with facebook logged in!");
             [self performSegueWithIdentifier:@"landing" sender:self];
+        }
+    }];
+}
+
+-(void) getUserData {
+    // Create request for user's Facebook data
+    FBRequest *request = [FBRequest requestForMe];
+
+    // Send request to Facebook
+    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            // result is a dictionary with the user's Facebook data
+            NSDictionary *userData = (NSDictionary *)result;
+
+            NSString *facebookID = userData[@"id"];
+            NSString *name = userData[@"name"];
+            NSString *location = userData[@"location"][@"name"];
+            NSString *gender = userData[@"gender"];
+            NSString *birthday = userData[@"birthday"];
+            NSString *relationship = userData[@"relationship_status"];
+
+            NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
+
+
+            PFUser *user = [PFUser currentUser];
+            user[@"facebookId"] = facebookID;
+            user[@"name"] = name;
+            [user saveInBackground];
         }
     }];
 }
