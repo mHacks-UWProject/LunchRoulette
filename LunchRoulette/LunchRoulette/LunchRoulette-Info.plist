@@ -36,5 +36,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>FacebookAppID</key>
+	<string>705483976146781</string>
+	<key>FacebookDisplayName</key>
+	<string>LunchRoulette</string>
 </dict>
 </plist>

@@ -7,12 +7,16 @@
 //
 
 #import "LRAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation LRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"RHIntkgdRNEzMEoqFdSc9LBIlxY3JaYN4ckRcuhW"
+                  clientKey:@"vvlNyTDDR9VVkv4SLpPjM0CcVE8KbdwpWf2T7pi0"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
 }
 
@@ -41,6 +45,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [PFFacebookUtils handleOpenURL:url];
 }
 
 @end

@@ -13,9 +13,6 @@
 		E5196F4117EE56C9003BBDE4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5196F3F17EE56C9003BBDE4 /* InfoPlist.strings */; };
 		E5196F4317EE56C9003BBDE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5196F4217EE56C9003BBDE4 /* main.m */; };
 		E5196F4717EE56C9003BBDE4 /* LRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5196F4617EE56C9003BBDE4 /* LRAppDelegate.m */; };
-		E5196F4A17EE56C9003BBDE4 /* LRRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5196F4917EE56C9003BBDE4 /* LRRootViewController.m */; };
-		E5196F4D17EE56C9003BBDE4 /* LRDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5196F4C17EE56C9003BBDE4 /* LRDataViewController.m */; };
-		E5196F5017EE56C9003BBDE4 /* LRModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5196F4F17EE56C9003BBDE4 /* LRModelController.m */; };
 		E5196F5317EE56C9003BBDE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5196F5117EE56C9003BBDE4 /* Main.storyboard */; };
 		E5196F5517EE56C9003BBDE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5196F5417EE56C9003BBDE4 /* Images.xcassets */; };
 		E5196F5C17EE56C9003BBDE4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F5B17EE56C9003BBDE4 /* XCTest.framework */; };
@@ -23,6 +20,18 @@
 		E5196F5E17EE56C9003BBDE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F3A17EE56C9003BBDE4 /* UIKit.framework */; };
 		E5196F6617EE56C9003BBDE4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5196F6417EE56C9003BBDE4 /* InfoPlist.strings */; };
 		E5196F6817EE56C9003BBDE4 /* LunchRouletteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5196F6717EE56C9003BBDE4 /* LunchRouletteTests.m */; };
+		E5196F7217EE61E6003BBDE4 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F7117EE61E6003BBDE4 /* FacebookSDK.framework */; };
+		E5196F7617EE6693003BBDE4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F7517EE6692003BBDE4 /* Parse.framework */; };
+		E5196F7817EE66CA003BBDE4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F7717EE66CA003BBDE4 /* AudioToolbox.framework */; };
+		E5196F7A17EE66D2003BBDE4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F7917EE66D2003BBDE4 /* CFNetwork.framework */; };
+		E5196F7C17EE66DE003BBDE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F7B17EE66DE003BBDE4 /* CoreLocation.framework */; };
+		E5196F7E17EE66E7003BBDE4 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F7D17EE66E7003BBDE4 /* libz.1.1.3.dylib */; };
+		E5196F8017EE66ED003BBDE4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F7F17EE66ED003BBDE4 /* MobileCoreServices.framework */; };
+		E5196F8217EE66F4003BBDE4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F8117EE66F4003BBDE4 /* QuartzCore.framework */; };
+		E5196F8417EE66FA003BBDE4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F8317EE66FA003BBDE4 /* Security.framework */; };
+		E5196F8617EE66FF003BBDE4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F8517EE66FF003BBDE4 /* StoreKit.framework */; };
+		E5196F8817EE6707003BBDE4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5196F8717EE6707003BBDE4 /* SystemConfiguration.framework */; };
+		E5196F8B17EE6AE3003BBDE4 /* LRRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5196F8A17EE6AE3003BBDE4 /* LRRootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,12 +55,6 @@
 		E5196F4417EE56C9003BBDE4 /* LunchRoulette-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LunchRoulette-Prefix.pch"; sourceTree = "<group>"; };
 		E5196F4517EE56C9003BBDE4 /* LRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRAppDelegate.h; sourceTree = "<group>"; };
 		E5196F4617EE56C9003BBDE4 /* LRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRAppDelegate.m; sourceTree = "<group>"; };
-		E5196F4817EE56C9003BBDE4 /* LRRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRootViewController.h; sourceTree = "<group>"; };
-		E5196F4917EE56C9003BBDE4 /* LRRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRootViewController.m; sourceTree = "<group>"; };
-		E5196F4B17EE56C9003BBDE4 /* LRDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRDataViewController.h; sourceTree = "<group>"; };
-		E5196F4C17EE56C9003BBDE4 /* LRDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRDataViewController.m; sourceTree = "<group>"; };
-		E5196F4E17EE56C9003BBDE4 /* LRModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRModelController.h; sourceTree = "<group>"; };
-		E5196F4F17EE56C9003BBDE4 /* LRModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRModelController.m; sourceTree = "<group>"; };
 		E5196F5217EE56C9003BBDE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5196F5417EE56C9003BBDE4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E5196F5A17EE56C9003BBDE4 /* LunchRouletteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LunchRouletteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +62,19 @@
 		E5196F6317EE56C9003BBDE4 /* LunchRouletteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LunchRouletteTests-Info.plist"; sourceTree = "<group>"; };
 		E5196F6517EE56C9003BBDE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5196F6717EE56C9003BBDE4 /* LunchRouletteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LunchRouletteTests.m; sourceTree = "<group>"; };
+		E5196F7117EE61E6003BBDE4 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Downloads/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		E5196F7517EE6692003BBDE4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E5196F7717EE66CA003BBDE4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E5196F7917EE66D2003BBDE4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E5196F7B17EE66DE003BBDE4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E5196F7D17EE66E7003BBDE4 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		E5196F7F17EE66ED003BBDE4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E5196F8117EE66F4003BBDE4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E5196F8317EE66FA003BBDE4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E5196F8517EE66FF003BBDE4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E5196F8717EE6707003BBDE4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E5196F8917EE6AE3003BBDE4 /* LRRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRootViewController.h; sourceTree = "<group>"; };
+		E5196F8A17EE6AE3003BBDE4 /* LRRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +82,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5196F8817EE6707003BBDE4 /* SystemConfiguration.framework in Frameworks */,
+				E5196F8617EE66FF003BBDE4 /* StoreKit.framework in Frameworks */,
+				E5196F8417EE66FA003BBDE4 /* Security.framework in Frameworks */,
+				E5196F8217EE66F4003BBDE4 /* QuartzCore.framework in Frameworks */,
+				E5196F8017EE66ED003BBDE4 /* MobileCoreServices.framework in Frameworks */,
+				E5196F7E17EE66E7003BBDE4 /* libz.1.1.3.dylib in Frameworks */,
+				E5196F7C17EE66DE003BBDE4 /* CoreLocation.framework in Frameworks */,
 				E5196F3917EE56C9003BBDE4 /* CoreGraphics.framework in Frameworks */,
+				E5196F7A17EE66D2003BBDE4 /* CFNetwork.framework in Frameworks */,
+				E5196F7817EE66CA003BBDE4 /* AudioToolbox.framework in Frameworks */,
+				E5196F7217EE61E6003BBDE4 /* FacebookSDK.framework in Frameworks */,
 				E5196F3B17EE56C9003BBDE4 /* UIKit.framework in Frameworks */,
 				E5196F3717EE56C9003BBDE4 /* Foundation.framework in Frameworks */,
+				E5196F7617EE6693003BBDE4 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +134,17 @@
 		E5196F3517EE56C9003BBDE4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E5196F8717EE6707003BBDE4 /* SystemConfiguration.framework */,
+				E5196F8517EE66FF003BBDE4 /* StoreKit.framework */,
+				E5196F8317EE66FA003BBDE4 /* Security.framework */,
+				E5196F8117EE66F4003BBDE4 /* QuartzCore.framework */,
+				E5196F7F17EE66ED003BBDE4 /* MobileCoreServices.framework */,
+				E5196F7D17EE66E7003BBDE4 /* libz.1.1.3.dylib */,
+				E5196F7B17EE66DE003BBDE4 /* CoreLocation.framework */,
+				E5196F7917EE66D2003BBDE4 /* CFNetwork.framework */,
+				E5196F7717EE66CA003BBDE4 /* AudioToolbox.framework */,
+				E5196F7517EE6692003BBDE4 /* Parse.framework */,
+				E5196F7117EE61E6003BBDE4 /* FacebookSDK.framework */,
 				E5196F3617EE56C9003BBDE4 /* Foundation.framework */,
 				E5196F3817EE56C9003BBDE4 /* CoreGraphics.framework */,
 				E5196F3A17EE56C9003BBDE4 /* UIKit.framework */,
@@ -120,12 +158,8 @@
 			children = (
 				E5196F4517EE56C9003BBDE4 /* LRAppDelegate.h */,
 				E5196F4617EE56C9003BBDE4 /* LRAppDelegate.m */,
-				E5196F4817EE56C9003BBDE4 /* LRRootViewController.h */,
-				E5196F4917EE56C9003BBDE4 /* LRRootViewController.m */,
-				E5196F4B17EE56C9003BBDE4 /* LRDataViewController.h */,
-				E5196F4C17EE56C9003BBDE4 /* LRDataViewController.m */,
-				E5196F4E17EE56C9003BBDE4 /* LRModelController.h */,
-				E5196F4F17EE56C9003BBDE4 /* LRModelController.m */,
+				E5196F8917EE6AE3003BBDE4 /* LRRootViewController.h */,
+				E5196F8A17EE6AE3003BBDE4 /* LRRootViewController.m */,
 				E5196F5117EE56C9003BBDE4 /* Main.storyboard */,
 				E5196F5417EE56C9003BBDE4 /* Images.xcassets */,
 				E5196F3D17EE56C9003BBDE4 /* Supporting Files */,
@@ -260,10 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5196F4D17EE56C9003BBDE4 /* LRDataViewController.m in Sources */,
+				E5196F8B17EE6AE3003BBDE4 /* LRRootViewController.m in Sources */,
 				E5196F4717EE56C9003BBDE4 /* LRAppDelegate.m in Sources */,
-				E5196F4A17EE56C9003BBDE4 /* LRRootViewController.m in Sources */,
-				E5196F5017EE56C9003BBDE4 /* LRModelController.m in Sources */,
 				E5196F4317EE56C9003BBDE4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +419,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/vtsatskin/Downloads/FacebookSDK,
+					/Users/vtsatskin/Code/LunchRoulette/LunchRoulette,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LunchRoulette/LunchRoulette-Prefix.pch";
 				INFOPLIST_FILE = "LunchRoulette/LunchRoulette-Info.plist";
@@ -400,6 +437,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/vtsatskin/Downloads/FacebookSDK,
+					/Users/vtsatskin/Code/LunchRoulette/LunchRoulette,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LunchRoulette/LunchRoulette-Prefix.pch";
 				INFOPLIST_FILE = "LunchRoulette/LunchRoulette-Info.plist";

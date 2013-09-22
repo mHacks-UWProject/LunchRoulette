@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LRRootViewController : UIViewController <UIPageViewControllerDelegate>
+@interface LRRootViewController : UINavigationController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
-@property (strong, nonatomic) UIPageViewController *pageViewController;
 
 @end
