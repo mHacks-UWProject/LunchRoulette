@@ -121,7 +121,7 @@ double const kLRPollingInterval = 2.5;
 
     cell.textLabel.text = [object objectForKey:@"name"];
 
-    NSString *picturePath = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal",  object[@"facebookId"]];
+    NSString *picturePath = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?width=150&height=150",  object[@"facebookId"]];
     NSData *pictureData = [NSData dataWithContentsOfURL:[NSURL URLWithString:picturePath]];
     UIImage *picture =[UIImage imageWithData:pictureData];
     cell.imageView.image = picture;
