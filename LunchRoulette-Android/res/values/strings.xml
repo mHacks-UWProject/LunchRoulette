@@ -4,5 +4,6 @@
     <string name="app_name">LunchRoulette</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="app_id">705483976146781</string>
 
 </resources>
